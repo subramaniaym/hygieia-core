@@ -213,17 +213,17 @@
         <dependency>
             <groupId>com.mysema.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
-            <version>3.6.0</version>
+            <version>3.7.3</version>
         </dependency>
         <dependency>
             <groupId>com.mysema.querydsl</groupId>
             <artifactId>querydsl-apt</artifactId>
-            <version>3.6.0</version>
+            <version>3.7.3</version>
         </dependency>
         <dependency>
             <groupId>com.mysema.querydsl</groupId>
             <artifactId>querydsl-mongodb</artifactId>
-            <version>3.6.0</version>
+            <version>3.7.3</version>
         </dependency>
 
         <dependency>
@@ -765,19 +765,19 @@
                                 <configuration>
                                     <tasks>
                                         <exec executable="git">
-                                            <arg line="clone -b gh-pages --single-branch ${site.publish.url} ${site.publish.checkout.directory}" />
+                                            <arg line="clone -b gh-pages --single-branch ${site.publish.url} ${site.publish.checkout.directory}"/>
                                         </exec>
 
                                         <exec executable="git" dir="site-content">
-                                            <arg line="fetch origin gh-pages" />
+                                            <arg line="fetch origin gh-pages"/>
                                         </exec>
 
                                         <exec executable="git" dir="site-content">
-                                            <arg line="reset --hard origin/gh-pages" />
+                                            <arg line="reset --hard origin/gh-pages"/>
                                         </exec>
 
                                         <pathconvert pathsep=" " property="dirs">
-                                            <dirset dir="${site.publish.checkout.directory}" includes="*" />
+                                            <dirset dir="${site.publish.checkout.directory}" includes="*"/>
                                         </pathconvert>
                                     </tasks>
                                 </configuration>
